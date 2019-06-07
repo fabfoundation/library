@@ -45,11 +45,11 @@
         <div class="card">
           <div class="card-body">
             <p class="badge badge-info rounded-0 text-light text-uppercase">{{kindLabel(item.kind)}}</p>
-            <h5><a :href="item.url || ''">{{item.title}}</a></h5>
+            <h5><a :href="item.url || ''" target="_blank">{{item.title}}</a></h5>
             <p class="font-italic"><span v-if="item.author">{{item.author}}</span> </p>
             <p class="text-muted">{{item.summary}}</p>
             <p class="font-weight-lighter"><span v-if="item.publication">{{item.publication}}</span>, <span v-if="item.published">{{item.published}}</span></p>
-            <p v-if="item.url"><a :href="item.url">{{item.url}}</a></p>
+            <p v-if="item.url"><a :href="item.url"  target="_blank">{{item.url}}</a></p>
           </div>
         </div>
         <!--card-->
