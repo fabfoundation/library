@@ -41,20 +41,28 @@
     <div id="app"></div>
 
     <script type="text/x-template" id="search-results-item">
-        <div class="row my-3"><div class="col-12">
-        <div class="card">
-          <div class="card-body">
-            <p class="badge badge-info rounded-0 text-light text-uppercase">{{kindLabel(item.kind)}}</p>
-            <h5><a :href="item.url || ''" target="_blank">{{item.title}}</a></h5>
-            <p class="font-italic"><span v-if="item.author">{{item.author}}</span> </p>
-            <p class="text-muted">{{item.summary}}</p>
-            <p class="font-weight-lighter"><span v-if="item.publication">{{item.publication}}</span>, <span v-if="item.published">{{item.published}}</span></p>
-            <p v-if="item.url"><a :href="item.url"  target="_blank">{{item.url}}</a></p>
-            <p v-if="item.attachment"><a :href="item.attachment" target="_blank">{{item.attachment}}</a></p>
+      <div class="row my-3">
+        <div class="col-12">
+          <div class="card">
+            <div class="card-body">
+              <p class="badge badge-info rounded-0 text-light text-uppercase">{{kindLabel(item.kind)}}</p>
+              <h5><a :href="item.url || ''" target="_blank">{{item.title}}</a></h5>
+              <p class="font-italic"><span v-if="item.author">{{item.author}}</span> </p>
+              <p class="text-muted">{{item.summary}}</p>
+              <p class="font-weight-lighter"><span v-if="item.publication">{{item.publication}}</span>, <span v-if="item.published">{{item.published}}</span></p>
+              <div class="row">
+                <div class="col" v-if="item.url">
+                  <a :href="item.url"  target="_blank">{{item.url}}</a>
+                </div>
+                <div class="col" v-if="item.attachment">
+                  <a :href="item.attachment" target="_blank">{{item.attachment}}</a>
+                </div>
+              </div>
+            </div>
           </div>
+          <!--card-->
         </div>
-        <!--card-->
-      </div></div>
+      </div>
     </script>
     <script type="text/x-template" id="search-results-header">
       <div class="row my-3">
