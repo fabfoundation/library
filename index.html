@@ -50,6 +50,7 @@
             <p class="text-muted">{{item.summary}}</p>
             <p class="font-weight-lighter"><span v-if="item.publication">{{item.publication}}</span>, <span v-if="item.published">{{item.published}}</span></p>
             <p v-if="item.url"><a :href="item.url"  target="_blank">{{item.url}}</a></p>
+            <p v-if="item.attachment"><a :href="item.attachment" target="_blank">{{item.attachment}}</a></p>
           </div>
         </div>
         <!--card-->
