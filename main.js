@@ -152,7 +152,7 @@ var app = new Vue({
       error: false,
       keywords: null,
       region: null,
-      sort_by: "pub_date",
+      sort_by: "created_date",
       sort_dir: "-"
     };
   },
