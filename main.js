@@ -231,7 +231,9 @@ var app = new Vue({
         this.$http
           .get(
             "https://forms.fabfoundation.org/api/v1/article/search/?category=" +
-              this.currentTopic.slug
+              this.currentTopic.slug +
+              "&" +
+              this.sort_options
           )
           .then(function(response) {
             cb(null, response.data);
